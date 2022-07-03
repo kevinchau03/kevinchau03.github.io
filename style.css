@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+:root {
+    --ff-primary: 'Inconsololata', monospace;
+    --fw-reg: 300;
+    --fw-bold: 999;
+
+    --clr-light: #09daf5;
+    --clr-dark: #000000;
+    --clr-accent: #baf9fb;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.5rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* Navigation Bar */ 
+.navbar {
+    background: rgb(0, 0, 0);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 1.3rem;
+    top: 0;
+    position:sticky;
+    z-index: 999;
+    border:2px black;
+}
+
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    height:80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbarLogo {
+    background-color: rgb(255, 255, 255);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-body);
+
+}
+.navbarMenu{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbarItem{
+    height:80px;
+}
+.navbarLinks{
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+/* General Styles */
+
+ul {
+    list-style-image: url('img/icons8-laptop-coding-32.png');
+}
+
+body {
+    background-image: linear-gradient(to bottom, #30e1e1 0%, #7a91f4 100%);
+    color: var(--clr-dark);
+    margin:0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+.section {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong { font-weight: var(--fw-bold);}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+.section_title {
+    margin-bottom: 0.5em;
+}
+
+.section_title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section_title--intro strong {
+    display: block;
+}
+
+.section_subtitle--intro {
+    background: var(--clr-accent);
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section_subtitle--intro{
+    font-family: var(--ff-primary);
+    margin-bottom: 1em;
+}
+
+/* Intro Section */
+
+#hero {
+    position: relative;
+}
+
+.myFace {
+    box-shadow: var(--bs);
+}
+@media (min-width: 600px) {
+    #hero {
+        display:grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: "img title" "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .myFace {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index:2;
+    }
+    
+    .section_subtitle--intro{
+        grid-area: img subtitle;
+        align-self: start;
+        grid-column: -1/1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}
+
+/* About Me Section */
+@media (min-width: 600px) {
+    .aboutContainer {
+        max-width: max-content;
+        text-align: left;
+        padding-left: 300px;
+        padding-right: 300px
+    }
+}
+/* Resume Section */
+@media (min-width: 600px){
+    .section_title--resume {
+        text-align: left;
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+    .container {
+        display: grid; 
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+        height: 100%;
+        padding-left: 300px;
+        padding-right: 300px;
+     }
+     .projects {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 2;
+        
+     }
+     .experience{
+        grid-row-start: 1;
+        grid-column-start: 2;
+        grid-row-end: 2;
+        grid-column-end: 3;
+     }
+     .coursework {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        grid-row-end: 3;
+        grid-column-end: 3;
+     }
+}
+
+/* Footer Section */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
