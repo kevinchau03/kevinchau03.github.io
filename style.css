@@ -92,11 +92,11 @@ h3 { font-size: var(--fs-h3); }
 
 /* Navigation Bar */
 .navcontainer {
-    width: 80%;
+    width: 65%;
     margin: 0 auto;
 }
 header {
-    background: rgb(44, 194, 220);
+    background: rgba(55, 88, 253, 0.903);
 }
 
 header::after{
@@ -107,15 +107,14 @@ header::after{
 .logo {
     float: left;
     padding: 10px 0;
-    padding-left: 130px;
 }
 nav {
+    position: sticky;
     float: right;
 }
 nav ul {
     margin: 0;
     padding: 0;
-    padding-right: 130px;
     list-style: none;
 }
 
@@ -127,13 +126,13 @@ nav li {
 }
 
 nav a {
-    color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
     text-decoration: none;
     text-transform: uppercase;
 }
 
 nav a:hover{
-    color: #000;
+    color: rgb(255, 255, 255);
 }
 
 nav a::before {
@@ -240,35 +239,37 @@ nav a:hover::before {
 
 /* Footer Section */
 
-.inner-footer {
-    margin: 0;
-    padding: 0;
-    background-color: black;
+.footer {
+    background: rgba(55, 88, 253, 0.903);
+    color: black;
+    text-align: center;
+    padding: 2.5em 0;
 }
-
-.social{
-    display: flex;
-}
-
-.social ul{
-    padding: 10px;
+.social-list {
+    list-style: none;
     display:flex;
-    width: 300px;
-    height: 30px;
-    margin: auto;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
 }
 
-.social--items {
-    list-style: none
+.social-list__item{
+    margin: 0 .5em;
 }
 
-.social--items a{
-    padding: 10px 20px;
-    font-size: 35px;
-    color:rgb(255, 255, 255);
+.social-list__link{
+    padding: .5em;
 }
 
-.outer-footer {
-    padding: 10px;
-    color: white;
+.footer__link{
+    text-decoration: none;
+}
+
+.footer a {
+    color:black;
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    color: rgb(255, 255, 255);
 }
