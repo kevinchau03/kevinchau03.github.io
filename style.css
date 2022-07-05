@@ -208,7 +208,7 @@ nav a:hover::before {
         display: grid; 
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        gap: 100px;
+        gap: 50px;
         height: 100%;
         padding-left: 300px;
         padding-right: 300px;
