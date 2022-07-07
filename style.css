@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 *,
 *::before,
 *::after{
@@ -5,12 +6,12 @@
 }
 
 :root {
-    --ff-primary: 'Inconsololata', monospace;
+    --ff-primary: 'Source Sans Pro', sans-serif;
     --fw-reg: 300;
     --fw-bold: 999;
 
-    --clr-light: #09daf5;
-    --clr-dark: #000000;
+    --clr-light: white;
+    --clr-dark: #0011ff;
     --clr-accent: #baf9fb;
 
     --fs-h1: 3rem;
@@ -33,8 +34,8 @@
 /* General Styles */
 
 body {
-    background-image: linear-gradient(to bottom, #30e1e1 0%, #7a91f4 100%);
-    color: var(--clr-dark);
+    background-image: linear-gradient(to bottom, #07a0ff 0%, #2200ff 100%);
+    color: var(--clr-light);
     margin:0;
     padding: 0;
     font-family: var(--ff-primary);
@@ -43,7 +44,7 @@ body {
 }
 
 .section {
-    padding-top: 8%;
+    padding-top: 10%;
     padding-bottom: 8%;
 }
 
@@ -123,13 +124,13 @@ nav li {
 }
 
 nav a {
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     text-decoration: none;
     text-transform: uppercase;
 }
 
 nav a:hover{
-    color: rgb(255, 255, 255);
+    color: var(--clr-dark);
 }
 
 nav a::before {
@@ -175,6 +176,7 @@ nav a:hover::before {
     
     .section_subtitle--intro{
         grid-area: img subtitle;
+        color: var(--clr-dark);
         align-self: start;
         grid-column: -1/1;
         grid-row: 2;
@@ -196,7 +198,7 @@ nav a:hover::before {
 }
 /* Resume Section */
 .container ul{
-    list-style-image: url('img/icons8-laptop-coding-32.png');
+    list-style-image: url('img/icons8-coding-60.png');
 }
 @media (min-width: 600px){
     .section_title--resume {
@@ -266,6 +268,7 @@ nav a:hover::before {
 }
 
 .footer__link:hover,
-.social-list__link:hover {
+.social-list__link:hover,
+.phone:hover {
     color: rgb(255, 255, 255);
 }
