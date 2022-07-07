@@ -239,7 +239,7 @@ nav a:hover::before {
 
 .footer {
     background: rgba(55, 88, 253, 0.903);
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 2.5em 0;
 }
@@ -264,11 +264,11 @@ nav a:hover::before {
 }
 
 .footer a {
-    color:black;
+    color:rgb(255, 255, 255);
 }
 
 .footer__link:hover,
 .social-list__link:hover,
 .phone:hover {
-    color: rgb(255, 255, 255);
+    color: var(--clr-dark);
 }
