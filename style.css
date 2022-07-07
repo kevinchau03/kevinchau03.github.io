@@ -44,8 +44,8 @@ body {
 }
 
 .section {
-    padding-top: 10%;
-    padding-bottom: 8%;
+    padding-top: 12%;
+    padding-bottom: 5%;
 }
 
 img {
@@ -198,7 +198,7 @@ nav a:hover::before {
 }
 /* Resume Section */
 .container ul{
-    list-style-image: url('img/icons8-coding-60.png');
+    list-style-image: url('img/icons8-online-coding-48.png');
 }
 @media (min-width: 600px){
     .section_title--resume {
